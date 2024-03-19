@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@1,700&display=swap");
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  max-width: 700px;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+}
+.ad-container {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  width: 300px;
+  height: auto;
+  margin: 30px;
+}
+
+.ad-container h2 {
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+}
+.ad-container p {
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+}
+.ad-container h1 {
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+}
+
+.ad-container #discount {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.ad-container a {
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.image-container {
+  height: 100%; /* Maintain the aspect ratio */
+  background-image: url("./image-product-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-top-left-radius: 10px; /* Remove extra space below inline images */
+  border-bottom-left-radius: 10px; /* Remove extra space below inline images */
+  /* Hide any overflowing content */
+}
+
+.image-container img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain the aspect ratio */
+  display: block;
+}
+.ad-container #price {
+  color: hsl(212, 21%, 14%);
+  font-size: 14px;
+  text-decoration: line-through;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .image-container {
+    width: 100%;
+    aspect-ratio: 686/480;
+    background-image: url("./image-product-mobile.jpg");
+  }
+  .image-container {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .ad-container {
+    margin: 10px 20px;
+  }
+  body {
+    height: 100vh;
+    height: 100dvh;
+    height: 100svh;
+    display: grid;
+    place-items: center;
+  }
+}
